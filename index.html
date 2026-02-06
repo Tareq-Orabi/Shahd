@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special gift for Shahd">
+    <meta name="theme-color" content="#8B0000">
+    <title>For Shahd ❤️</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts - Modern & Elegant -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LANDING PAGE ================= -->
+    <section id="landing-page" class="section-active" aria-label="Landing Page">
+        <div class="floating-hearts" aria-hidden="true"></div>
+
+        <div class="landing-content">
+            <div class="greeting-card">
+                <div class="card-top">
+                    <div class="heart-icon-large">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <h1 class="main-greeting">
+                        Hello, <span class="name-highlight">Shahd</span>
+                    </h1>
+                    <p class="sub-greeting">Something special, just for you</p>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <div class="card-bottom">
+                    <p class="question-text">Would you like to see your gift?</p>
+                    <button id="enter-btn" class="modern-btn" type="button" aria-label="Enter to see your gift">
+                        <span>Yes, Show Me</span>
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DASHBOARD ================= -->
+    <section id="dashboard" class="hidden" aria-label="Gift Dashboard">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <h1 class="dashboard-title">
+                    <span class="title-line"></span>
+                    These Are For You
+                    <span class="title-line"></span>
+                </h1>
+                <p class="dashboard-subtitle">Four moments, one heart <span class="heart-emoji"
+                        aria-label="red heart">❤️</span></p>
+            </header>
+
+            <div class="cards-grid">
+                <article class="gift-card" data-modal="modal-gallery" tabindex="0" role="button"
+                    aria-label="Open Photo Gallery">
+                    <div class="card-inner">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-images" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title"> Shahd Museum</h3>
+                        <p class="card-description">Captured moments</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </article>
+
+                <article class="gift-card" data-modal="modal-bouquet" tabindex="0" role="button"
+                    aria-label="Open Virtual Bouquet">
+                    <div class="card-inner">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-spa" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">For You</h3>
+                        <p class="card-description">«Shahd's special moments»</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </article>
+
+                <article class="gift-card" data-modal="modal-song" tabindex="0" role="button" aria-label="Open Song">
+                    <div class="card-inner">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Our Song</h3>
+                        <p class="card-description">Listen & remember</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </article>
+
+                <article class="gift-card" data-modal="modal-letter" tabindex="0" role="button"
+                    aria-label="Open Letter">
+                    <div class="card-inner">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">A Letter</h3>
+                        <p class="card-description">From my heart</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- Gallery Modal -->
+    <div id="modal-gallery" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+        <div class="modal-backdrop" data-close aria-label="Close modal"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="gallery-title" class="modal-title">Your museum</h2>
+                <button class="modal-close" data-close type="button" aria-label="Close gallery">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="photo-gallery-polaroid">
+                    <div class="polaroid-item" style="--rot: -3deg;" tabindex="0">
+                        <img src="images/IMG_5262.jpg" alt="Photobooth moment" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Photobooth 📸</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: 2deg;" tabindex="0">
+                        <img src="images/IMG_5266.jpg" alt="Intramurals day" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Artist✨~</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: -4deg;" tabindex="0">
+                        <img src="images/IMG_5294.jpg" alt="Graduation celebration" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Sweet💗</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: 3deg;" tabindex="0">
+                        <img src="images/IMG_5295.jpg" alt="Special moment together" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Cute 💞</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: -2deg;" tabindex="0">
+                        <img src="images/IMG_5296.jpg" alt="Favorite memories" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">My beautiful moon🤩</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: 4deg;" tabindex="0">
+                        <img src="images/IMG_5298.jpg" alt="Coffee time together" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Favorites ❤️</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: -1deg;" tabindex="0">
+                        <img src="images/IMG_5297 2.jpg" alt="Beautiful moment" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Princess💫</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: 2.5deg;" tabindex="0">
+                        <img src="images/3D29719D-FD1B-4202-968C-6335D1E77C65.JPG" alt="Cherished memory" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Angel🤍</p>
+                    </div>
+                    <div class="polaroid-item" style="--rot: -3.5deg;" tabindex="0">
+                        <img src="images/4926D3A4-F3AA-4299-B6B4-E2B285841BE0.JPG" alt="Sweet memory" loading="lazy" class="polaroid-img">
+                        <p class="polaroid-caption">Forever 🌹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouquet Modal -->
+    <div id="modal-bouquet" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="bouquet-title">
+        <div class="modal-backdrop" data-close aria-label="Close modal"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="bouquet-title" class="modal-title">For You</h2>
+                <button class="modal-close" data-close type="button" aria-label="Close bouquet">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="bouquet-layout">
+                    <div class="bouquet-messages" id="bouquet-messages" role="list" aria-label="Bouquet messages"></div>
+
+                    <div class="bouquet-hero-section">
+                        <!-- Left Side Box -->
+                        <div class="hero-side-box hero-left">
+                            <div class="side-box-content">
+                                <p class="side-box-text" id="left-side-text">Beauty & Grace</p>
+                            </div>
+                        </div>
+
+                        <!-- SVG Curved Lines -->
+                        <svg class="hero-connector-lines" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+                            <path class="connector-line" d="M 20,100 Q 100,50 200,100" />
+                            <path class="connector-line" d="M 380,100 Q 300,150 200,100" />
+                        </svg>
+
+                        <!-- Center Photo -->
+                        <div class="bouquet-center">
+                            <div class="center-photo-frame">
+                                <img src="images/IMG_5298.jpg" alt="Beautiful Shahd" class="center-photo" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Right Side Box -->
+                        <div class="hero-side-box hero-right">
+                            <div class="side-box-content">
+                                <p class="side-box-text" id="right-side-text">Warmth & Light</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Song Modal -->
+    <div id="modal-song" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="song-title">
+        <div class="modal-backdrop" data-close aria-label="Close modal"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="song-title" class="modal-title">This Song Reminds Me of You</h2>
+                <button class="modal-close" data-close type="button" aria-label="Close song">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="song-player">
+                    <div class="audio-visualizer">
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                    </div>
+
+                    <div class="video-container">
+                        <video id="songVideo" controls preload="metadata" aria-label="Song for Shahd"
+                            controlsList="nodownload">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <p>Your browser doesn't support HTML5 video. Here is a <a href="video/video.mp4">link to the
+                                    video</a> instead.</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Letter Modal -->
+    <div id="modal-letter" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+        <div class="modal-backdrop" data-close aria-label="Close modal"></div>
+        <div class="modal-container modal-letter-container">
+            <div class="modal-header">
+                <h2 id="letter-title" class="modal-title">A Letter For You</h2>
+                <button class="modal-close" data-close type="button" aria-label="Close letter">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="letter-content">
+                    <div class="letter-text" id="typewriter-text" aria-live="polite"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Viewer -->
+    <div id="fullscreen-viewer" class="fullscreen-viewer hidden">
+        <button class="fullscreen-close" aria-label="Close fullscreen">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="" id="fullscreen-image">
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
